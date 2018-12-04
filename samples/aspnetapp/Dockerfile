@@ -3,7 +3,7 @@ WORKDIR /app
 
 # copy csproj and restore as distinct layers
 COPY . /samples/aspnetapp/*.sln .
-COPY samples/aspnetapp/*.csproj ./aspnetapp/
+COPY . /samples/aspnetapp/*.csproj ./aspnetapp/
 RUN dotnet restore
 
 # copy everything else and build app
